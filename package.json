@@ -48,7 +48,8 @@
     "postcss": "8.4.47",
     "postcss-safe-parser": "6.0.0"
   },
-  "engines": {
-    "node": "16.x"
-  }
+ "engines": {
+  "node": "18.x"
+}
+
 }
