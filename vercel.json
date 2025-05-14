@@ -7,10 +7,6 @@
         "buildCommand": "npm run build"
       }
     }
-  ],
-  "build": {
-    "env": {
-      "NODE_OPTIONS": "--openssl-legacy-provider"
-    }
-  }
+  ]
+  
 }

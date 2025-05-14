@@ -8,20 +8,29 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "assert": "^2.1.0",
     "axios": "^0.21.1",
+    "buffer": "^6.0.3",
     "chart.js": "^3.5.1",
+    "crypto-browserify": "^3.12.1",
     "html-react-parser": "^4.2.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "process": "^0.11.10",
     "react": "^16.14.0",
     "react-alice-carousel": "^2.5.1",
     "react-chartjs-2": "^3.0.4",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.4",
     "web-vitals": "^1.0.1",
     "webpack": "^5.99.8"
   },
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -48,8 +57,10 @@
     "postcss": "8.4.47",
     "postcss-safe-parser": "6.0.0"
   },
- "engines": {
-  "node": "18.x"
-}
-
+  "engines": {
+    "node": "18.x"
+  },
+  "devDependencies": {
+    "react-app-rewired": "^2.2.1"
+  }
 }
