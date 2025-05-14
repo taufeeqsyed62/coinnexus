@@ -2,7 +2,7 @@ import { LinearProgress, makeStyles, Typography } from "@material-ui/core";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ReactHtmlParser from "react-html-parser";
+import parse from "html-react-parser"; // Changed import
 import CoinInfo from "../components/CoinInfo";
 import { SingleCoin } from "../config/api";
 import { numberWithCommas } from "../components/CoinsTable";
@@ -93,14 +93,13 @@ const CoinPage = () => {
           {coin?.name}
         </Typography>
         <Typography variant="subtitle1" className={classes.description}>
-          {ReactHtmlParser(coin?.description.en.split(". ")[0])}.
+          {parse(coin?.description.en.split(". ")[0])}. {/* Changed to parse */}
         </Typography>
         <div className={classes.marketData}>
           <span style={{ display: "flex" }}>
             <Typography variant="h5" className={classes.heading}>
               Rank:
             </Typography>
-            &nbsp; &nbsp;
             <Typography
               variant="h5"
               style={{
@@ -115,7 +114,6 @@ const CoinPage = () => {
             <Typography variant="h5" className={classes.heading}>
               Current Price:
             </Typography>
-            &nbsp; &nbsp;
             <Typography
               variant="h5"
               style={{
@@ -132,7 +130,6 @@ const CoinPage = () => {
             <Typography variant="h5" className={classes.heading}>
               Market Cap:
             </Typography>
-            &nbsp; &nbsp;
             <Typography
               variant="h5"
               style={{

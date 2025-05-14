@@ -20,6 +20,7 @@ import axios from "axios";
 import { CoinList } from "../config/api";
 import { useHistory } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
+import StockInfoBox from './StockInfoBox';
 
 export function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -192,20 +193,21 @@ export default function CoinsTable() {
         </TableContainer>
 
         {/* Comes from @material-ui/lab */}
-        <Pagination
-          count={(handleSearch()?.length / 10).toFixed(0)}
-          style={{
-            padding: 20,
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-          }}
-          classes={{ ul: classes.pagination }}
-          onChange={(_, value) => {
-            setPage(value);
-            window.scroll(0, 450);
-          }}
-        />
+       <Pagination
+  count={(handleSearch()?.length / 10).toFixed(0)}
+  style={{
+    padding: 20,
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+  }}
+  classes={{ ul: classes.pagination }}
+  onChange={(_, value) => {
+    setPage(value);
+    window.scroll(0, 450);
+  }}
+/>
+        <StockInfoBox />
       </Container>
     </ThemeProvider>
   );
